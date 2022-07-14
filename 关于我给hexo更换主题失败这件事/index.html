@@ -1,215 +1,83 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!DOCTYPE HTML>
+<html>
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
-
-<script class="next-config" data-name="main" type="application/json">{"hostname":"lsct2022.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.12.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
-
-    <meta name="description" content="记录一下小白使用hexo犯的错误我对hexo和github不是很熟,看了个教程就开始撸了. 网上搜到的像ctrl+f5和hexo clean ; hexo g ; hexo d;啥的都没起到作用. 后面才发现是brach一开始使用ph-pages,后面又改用master的原因.这样导致制造了2个分支,而一开始的ph-pages是默认分支,后面怎么改都访问的是一开始的页面,自然怎么改都没有作用了.">
-<meta property="og:type" content="article">
-<meta property="og:title" content="关于我给hexo更换主题失败这件事">
-<meta property="og:url" content="https://lsct2022.github.io/%E5%85%B3%E4%BA%8E%E6%88%91%E7%BB%99hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98%E5%A4%B1%E8%B4%A5%E8%BF%99%E4%BB%B6%E4%BA%8B/index.html">
-<meta property="og:site_name" content="我的博客">
-<meta property="og:description" content="记录一下小白使用hexo犯的错误我对hexo和github不是很熟,看了个教程就开始撸了. 网上搜到的像ctrl+f5和hexo clean ; hexo g ; hexo d;啥的都没起到作用. 后面才发现是brach一开始使用ph-pages,后面又改用master的原因.这样导致制造了2个分支,而一开始的ph-pages是默认分支,后面怎么改都访问的是一开始的页面,自然怎么改都没有作用了.">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-07-13T18:09:14.000Z">
-<meta property="article:modified_time" content="2022-07-14T11:39:06.489Z">
-<meta property="article:author" content="zgc">
-<meta property="article:tag" content="学习 笔记">
-<meta name="twitter:card" content="summary">
-
-
-<link rel="canonical" href="https://lsct2022.github.io/%E5%85%B3%E4%BA%8E%E6%88%91%E7%BB%99hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98%E5%A4%B1%E8%B4%A5%E8%BF%99%E4%BB%B6%E4%BA%8B/">
-
-
-
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://lsct2022.github.io/%E5%85%B3%E4%BA%8E%E6%88%91%E7%BB%99hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98%E5%A4%B1%E8%B4%A5%E8%BF%99%E4%BB%B6%E4%BA%8B/index.html","path":"关于我给hexo更换主题失败这件事/index.html","title":"关于我给hexo更换主题失败这件事"}</script>
-
-<script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>关于我给hexo更换主题失败这件事 | 我的博客</title>
+  <meta charset="utf-8">
   
-
-
-
-
-
-  <noscript>
-    <link rel="stylesheet" href="/css/noscript.css">
-  </noscript>
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
-  <div class="headband"></div>
-
-  <main class="main">
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏" role="button">
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <i class="logo-line"></i>
-      <p class="site-title">我的博客</p>
-      <i class="logo-line"></i>
-    </a>
-      <p class="site-subtitle" itemprop="description">持续学习</p>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-
-</div>
-        
-  
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-
-  <aside class="sidebar">
-
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
-      <ul class="sidebar-nav">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <div class="sidebar-panel-container">
-        <!--noindex-->
-        <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8B%E5%B0%8F%E7%99%BD%E4%BD%BF%E7%94%A8hexo%E7%8A%AF%E7%9A%84%E9%94%99%E8%AF%AF"><span class="nav-number">1.</span> <span class="nav-text">记录一下小白使用hexo犯的错误</span></a></li></ol></div>
-        </div>
-        <!--/noindex-->
-
-        <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">zgc</p>
-  <div class="site-description" itemprop="description">写下笔记</div>
-</div>
-<div class="site-state-wrap site-overview-item animated">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-        <a href="/archives/">
-          <span class="site-state-item-count">2</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">1</span>
-        <span class="site-state-item-name">标签</span>
-      </div>
-  </nav>
-</div>
-
-
-
-        </div>
-      </div>
-    </div>
-  </aside>
-  <div class="sidebar-dimmer"></div>
-
-
-    </header>
-
-    
-  <div class="back-to-top" role="button" aria-label="返回顶部">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
-
-
-    <div class="main-inner post posts-expand">
-
+  <title>关于我给hexo更换主题失败这件事 | 我的博客 | 持续学习</title>
 
   
-
-
-<div class="post-block">
-  
+  <meta name="author" content="zgc">
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lsct2022.github.io/%E5%85%B3%E4%BA%8E%E6%88%91%E7%BB%99hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98%E5%A4%B1%E8%B4%A5%E8%BF%99%E4%BB%B6%E4%BA%8B/index.html">
+  
+  <meta name="description" content="写下笔记">
+  
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="zgc">
-    </span>
+  
+  <meta name="keywords" content="学习 笔记">
+  
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="我的博客">
-      <meta itemprop="description" content="写下笔记">
-    </span>
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="关于我给hexo更换主题失败这件事 | 我的博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          关于我给hexo更换主题失败这件事
-        </h1>
+  <meta property="og:title" content="关于我给hexo更换主题失败这件事"/>
 
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
+  <meta property="og:site_name" content="我的博客"/>
+
+  
+  <meta property="og:image" content="/favicon.ico"/>
+  
+
+  <link href="/favicon.ico" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="我的博客" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body>
+<div class="blog">
+  <div class="content">
+
+    <header>
+  <div class="site-branding">
+    <h1 class="site-title">
+      <a href="/">我的博客</a>
+    </h1>
+    <p class="site-description">持续学习</p>
+  </div>
+  <nav class="site-navigation">
+    <ul>
       
+    </ul>
+  </nav>
+</header>
 
-      <time title="创建时间：2022-07-14 02:09:14 / 修改时间：19:39:06" itemprop="dateCreated datePublished" datetime="2022-07-14T02:09:14+08:00">2022-07-14</time>
-    </span>
+    <main class="site-main posts-loop">
+    <article>
 
   
-</div>
+    
+    <h3 class="article-title"><span>关于我给hexo更换主题失败这件事</span></h3>
+    
+  
 
-        </div>
-      </header>
+  <div class="article-top-meta">
+    <span class="posted-on">
+      <a href="/关于我给hexo更换主题失败这件事/index.html" rel="bookmark">
+        <time class="entry-date published" datetime="2022-07-13T18:09:14.000Z">
+          2022-07-14
+        </time>
+      </a>
+    </span>
+  </div>
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+
+  
+
+  <div class="article-content">
+    <div class="entry">
+      
         <h1 id="记录一下小白使用hexo犯的错误"><a href="#记录一下小白使用hexo犯的错误" class="headerlink" title="记录一下小白使用hexo犯的错误"></a>记录一下小白使用hexo犯的错误</h1><p>我对hexo和github不是很熟,看了个教程就开始撸了.</p>
 <p>网上搜到的像<code>ctrl+f5</code>和<code>hexo clean ; hexo g ; hexo d;</code>啥的都没起到作用.</p>
 <p>后面才发现是<code>brach</code>一开始使用<code>ph-pages</code>,后面又改用<code>master</code>的原因.这样导致制造了2个分支,而一开始的<code>ph-pages</code>是默认分支,后面怎么改都访问的是一开始的页面,自然怎么改都没有作用了.</p>
@@ -217,64 +85,23 @@
 
 <p>这种不了解node.js和git,直接照着教程做东西做东西一步小心陷坑里，浪费大量时间.还发现部署后,博客页面有时候没有变化,不知道是什么原因.</p>
 
+      
     </div>
 
-    
-    
-    
-
-    <footer class="post-footer">
-
-        
-
-          <div class="post-nav">
-            <div class="post-nav-item">
-                <a href="/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/index.html" rel="prev" title="测试文章">
-                  <i class="fa fa-chevron-left"></i> 测试文章
-                </a>
-            </div>
-            <div class="post-nav-item">
-            </div>
-          </div>
-    </footer>
-  </article>
-</div>
-
-
-
-
-
-
-</div>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-
-
-<div class="copyright">
-  &copy; 
-  <span itemprop="copyrightYear">2022</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">zgc</span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
 
+  <div class="article-footer">
+    <div class="article-meta pull-left">
+
+    
+
+    
+
     </div>
-  </footer>
 
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
-
-  
-
-
-
-
+    
+  </div>
+</article>
 
   
 
@@ -282,5 +109,22 @@
 
 
 
+
+    </main>
+
+    <footer class="site-footer">
+  <p class="site-info">
+    Proudly powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
+    Theme by <a href="https://github.com/CodeDaraW/Hacker" target="_blank">Hacker</a>
+    </br>
+    
+    &copy; 2022 zgc
+    
+  </p>
+</footer>
+    
+    
+  </div>
+</div>
 </body>
 </html>
